@@ -22,3 +22,4 @@
 
 ## Админ панель
 
+![image](https://github.com/user-attachments/assets/606fa303-e6d2-4f94-9bcd-7135df25781a)
