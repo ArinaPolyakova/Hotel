@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номера отеля</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('/api/placeholder/1200/300') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .rooms-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .rooms-count {
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .room-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .room-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .room-content {
+            padding: 1.5rem;
+        }
+
+        .room-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .room-description {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Уютные номера для вашего отдыха</h1>
+    </div>
+
+    <div class="container">
+        <div class="rooms-header">
+            <h2>Наши номера</h2>
+            <p class="rooms-count">45 номеров</p>
+        </div>
+
+        <div class="rooms-grid">
+            <div class="room-card">
+                <img src="D:\Вёрстка сайта Отеля\img\Screenshot 2025-01-17 104942.png" alt="Эконом номер" class="room-image">
+                <div class="room-content">
+                    <h3 class="room-title">Эконом</h3>
+                    <p class="room-description">Бюджетный и уютный вариант с необходимой мебелью и минимальным набором удобств. Идеален для непродолжительного проживания.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="/api/placeholder/400/200" alt="Стандарт номер" class="room-image">
+                <div class="room-content">
+                    <h3 class="room-title">Стандарт</h3>
+                    <p class="room-description">Комфортный вариант со всем необходимым, имеет более высокий уровень удобства по сравнению с Эконом.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="/api/placeholder/400/200" alt="Люкс номер" class="room-image">
+                <div class="room-content">
+                    <h3 class="room-title">Люкс</h3>
+                    <p class="room-description">Роскошный и комфортный вариант, подходит для длительного проживания или особых случаев.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
