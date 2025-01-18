@@ -24,6 +24,6 @@
 
 ![image](https://github.com/user-attachments/assets/606fa303-e6d2-4f94-9bcd-7135df25781a)
 
-##БД
+## БД
 ![image](https://github.com/user-attachments/assets/700d4c6f-7237-40aa-b5ad-db811657f718)
 
