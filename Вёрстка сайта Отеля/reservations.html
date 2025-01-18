@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование отеля</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.booking-page {
+    width: 90%;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 300px;
+}
+.image-container{
+    width: 100%;
+    height: 100%;
+     overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.booking-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+}
+.form-container{
+  display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 15px;
+     display: flex;
+    flex-direction: column;
+
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 98%;
+    margin-bottom: 5px;
+}
+input:focus{
+  outline:none;
+}
+.input-wrapper{
+   display: flex;
+  align-items: center;
+   border: 1px solid #ddd;
+  border-radius: 5px;
+   margin-bottom: 5px;
+  padding-left: 5px;
+  
+}
+.input-wrapper input{
+    border: none;
+    margin-bottom: 0;
+    padding-left: 5px;
+    width: 90%;
+
+}
+.icon {
+    padding-right: 5px;
+  color: gray;
+}</style>
+
+<body>
+    <div class="booking-page">
+        <header>
+            <div class="image-container">
+                <img src="" alt="Фон отеля">
+            </div>
+
+        </header>
+        <section class="booking-form">
+            <div class="button-container">
+                <button class="button">Для себя</button>
+                <button class="button">Для другого</button>
+            </div>
+             <div class="form-container">
+                <div class="form-group">
+                    <label for="arrival-date">Забронировать номер</label>
+                    <div class="input-wrapper">
+                         <input type="text" id="arrival-date" placeholder="Всё самое лучшее для вас.">
+                            <div class="icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                   <label for="departure-date">Заезд</label>
+                    <div class="input-wrapper">
+                         <input type="text" id="departure-date">
+                            <div class="icon">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                    </div>
+               </div>
+                <div class="form-group">
+                    <label for="guests">Выезд</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="guests" value="2">
+                         <div class="icon">
+                         <i class="fa-solid fa-user-group"></i>
+                         </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="find-room">Гости</label>
+                   <div class="input-wrapper">
+                       <input type="text" id="find-room">
+                      <div class="icon">
+                         <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                  </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="find-room">Найти номер</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="find-room">
+                       <div class="icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                       </div>
+
+                  </div>
+               </div>
+             </div>
+        </section>
+    </div>
+</body>
+</html>
+

@@ -5,25 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Номера отеля</title>
     <style>
-        * {
+        *
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Занимает всю высоту экрана */
+        }
+        header {
+            background-color: #ffffff;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header img {
+            max-height: 100px;
+        }
+        nav ul {
+            list-style: none;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            overflow: hidden;
         }
-
-        .hero {
-            height: 300px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-                        url('/api/placeholder/1200/300') center/cover;
+        nav li {
+            float: left;
+        }
+        nav a {
+            display: block;
+            color: rgb(119, 119, 119);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #cacaca;
+        }
+        main {
+            padding: 20px;
+            flex: 1;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center; /* Выравнивание по центру */
+            justify-content: center; /* Выравнивание по центру */
+        }
+        .auth-form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .auth-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .auth-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .auth-form input[type="email"],
+        .auth-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+        }
+        .auth-form button {
+            background-color: #050505;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Занимает всю ширину контейнера */
+        }
+        .auth-form button:hover {
+            background-color: #e38a3c;
+        }
+        .auth-form .signup-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .auth-form .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .auth-form .signup-link a:hover {
+            text-decoration: underline;
+        }
+         .full-screen-image {
+            width: 100%;
+            height: 10%; /* Занимает всю высоту экрана */
+            object-fit: cover; /* Масштабирует изображение, чтобы оно заполнило весь контейнер */
+            position: relative; /* Позиционируем изображение для наложения текста */
+            z-index: -1; /* Изображение находится позади других элементов */
+        }
+        footer {
+            background-color: #333;
             color: white;
             text-align: center;
-            margin-bottom: 2rem;
+            padding: 10px 0;
+            margin-top: 20px;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -82,10 +176,19 @@
         }
     </style>
 </head>
+        <img src="img/Screenshot 2025-01-17 110812.png" alt="Фото отеля" class="full-screen-image">
 <body>
-    <div class="hero">
-        <h1>Уютные номера для вашего отдыха</h1>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="nomer.html">Номера</a></li>
+            <li><a href="#">Бронирование</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="login.html">Войти</a></li>
+             <li><a href="registrat.html">Регистрация</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <div class="rooms-header">
@@ -95,7 +198,7 @@
 
         <div class="rooms-grid">
             <div class="room-card">
-                <img src="D:\Вёрстка сайта Отеля\img\Screenshot 2025-01-17 104942.png" alt="Эконом номер" class="room-image">
+                <img src="img/XXL_height.webp" alt="Эконом номер" class="room-image">
                 <div class="room-content">
                     <h3 class="room-title">Эконом</h3>
                     <p class="room-description">Бюджетный и уютный вариант с необходимой мебелью и минимальным набором удобств. Идеален для непродолжительного проживания.</p>
@@ -103,7 +206,7 @@
             </div>
 
             <div class="room-card">
-                <img src="/api/placeholder/400/200" alt="Стандарт номер" class="room-image">
+                <img src="img/939b45ddd6e26a7e831a74ca7d92a13741bccd99.webp" alt="Стандарт номер" class="room-image">
                 <div class="room-content">
                     <h3 class="room-title">Стандарт</h3>
                     <p class="room-description">Комфортный вариант со всем необходимым, имеет более высокий уровень удобства по сравнению с Эконом.</p>
@@ -111,7 +214,7 @@
             </div>
 
             <div class="room-card">
-                <img src="/api/placeholder/400/200" alt="Люкс номер" class="room-image">
+                <img src="img/10t74rvfq516ib9dxzqg5kcf3i3ivfkl.webp" alt="Люкс номер" class="room-image">
                 <div class="room-content">
                     <h3 class="room-title">Люкс</h3>
                     <p class="room-description">Роскошный и комфортный вариант, подходит для длительного проживания или особых случаев.</p>
